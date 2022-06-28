@@ -1,0 +1,57 @@
+
+:root {
+	--near_white: #fafaff;
+	--sloth_gray1: #b0b0b5;
+	--sloth_gray2: #4d4e56;
+	--sloth_orange1: #e78e5a;
+	--sloth_orange2: #D87841;
+	--blue: #63b1de;
+	--sloth_gray2_darker3: hsl(233.33333333333337, 5.5214723926%, 28.9607843137%);
+	--sloth_gray2_darker5: hsl(233.33333333333337, 5.5214723926%, 26.9607843137%);
+	--sloth_gray2_darker10: hsl(233.33333333333337, 5.5214723926%, 16.9607843137%);
+	--sloth_gray2_lighter2: hsl(233.33333333333337, 5.5214723926%, 33.9607843137%);
+	--blue_lighter8: hsl(201.9512195121951, 65.0793650794%, 66.9411764706%);
+	--lightblue: hsl(201.9512195121951, 65.0793650794%, 78.9411764706%);
+	--fg: var(--near_white);
+	--bg: var(--sloth_gray2_darker5);
+	--bg_trans: rgba(77, 78, 86, 0.62);
+	--bg_accent: var(--sloth_gray2_lighter2);
+	--fg_accent: var(--lightblue);
+	--footer_bg: var(--bg_accent);
+	--link_fg: var(--fg_accent);
+	--button_border: 0.08rem solid hsl(21.854304635761586, 65.9388646288%, 40.0980392157%);
+	--button_bg: var(--blue_lighter8);
+	--button_hover_bg: var(--lightblue);
+	--boxshadow: 0 0.4rem 1rem -0.1rem rgba(0,0,0,0.15);
+	--boxshadow_border: 0.08rem solid var(--sloth_gray2_darker5);
+	--profile_avatar_border: 0.2rem solid var(--sloth_orange2)
+}
+
+/*
+	GoToSocial
+	Copyright (C) 2021-2022 GoToSocial Authors admin@gotosocial.org
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU Affero General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU Affero General Public License for more details.
+
+	You should have received a copy of the GNU Affero General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/*
+   This stylesheets defines (color) variables to be used by other stylesheets on the page
+   postcss-custom-prop-vars will transpile these to css --variables
+*/
+
+/* Color definitions */
+
+/* derivative colors */
+
+/* Color variables as used in a specific location */

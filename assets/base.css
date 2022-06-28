@@ -1,0 +1,276 @@
+
+:root {
+	--br: 0.4rem;
+}
+
+/*
+	GoToSocial
+	Copyright (C) 2021-2022 GoToSocial Authors admin@gotosocial.org
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU Affero General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU Affero General Public License for more details.
+
+	You should have received a copy of the GNU Affero General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+html, body {
+	padding: 0;
+	margin: 0;
+	background: var(--bg);
+	color: var(--fg);
+	font-family: sans-serif;
+}
+
+body {
+	line-height: 1.5em;
+	min-height: 100vh;
+	position: relative;
+}
+
+.page {
+	position: absolute;
+	display: grid;
+	min-height: 100%;
+	min-width: 100%;
+
+	grid-template-columns: 1fr 50% 1fr;
+	grid-template-columns: auto min(92%, 90ch) auto;
+
+	grid-template-rows: auto 1fr auto;
+}
+
+h1 {
+	margin: 0;
+	line-height: 2.4rem;
+}
+
+a {
+	color: var(--link_fg);
+}
+
+header, footer {
+	grid-column: 1 / span 3;
+}
+
+.content {
+	grid-column: 2;
+	align-self: start;
+}
+
+header a {
+	margin: 2rem;
+	/* background: $header_bg; */
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+header a img {
+		margin-bottom: 1rem;
+		align-self: center;
+		height: 6rem;
+	}
+
+header a div {
+		flex-grow: 1;
+		align-self: center;
+		display: flex;
+	}
+
+header a div h1 {
+			align-self: center;
+			color: var(--fg);
+		}
+
+.excerpt_top {
+	margin-top: -1rem;
+	margin-bottom: 2rem;
+	font-style: italic;
+	font-weight: normal;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.excerpt_top .count {
+		font-weight: bold;
+		color: var(--fg_accent);
+	}
+
+main section {
+		background: var(--bg_accent);
+		box-shadow: var(--boxshadow);
+		border: var(--boxshadow_border);
+		border-radius: var(--br);
+		padding: 2rem;
+		margin-bottom: 2rem;
+	}
+
+main p:first-child {
+		margin-top: 0;
+	}
+
+main p:last-child {
+		margin-bottom: 0;
+	}
+
+.button, button {
+	border-radius: 0.2rem;
+	color: var(--fg);
+	background: var(--button_bg);
+	box-shadow: var(--boxshadow);
+	border: var(--button_border);
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding: 0.5rem;
+	border: none;
+	cursor: pointer;
+}
+
+.button:hover, button:hover {
+		background: var(--button_hover_bg);
+	}
+
+.nounderline {
+	text-decoration: none;
+}
+
+.accent {
+	color: var(--acc1);
+}
+
+.logo {
+	justify-self: center;
+}
+
+.logo img {
+		height: 30vh;
+	}
+
+section.apps {
+	align-self: start;
+}
+
+section.apps .applist {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0.5rem;
+		align-content: start;
+	}
+
+section.apps .applist .entry {
+			display: grid;
+			grid-template-columns: 30% 1fr;
+			gap: 0.5rem;
+			padding: 0.5rem;
+			background: var(--bg_accent);
+			border-radius: 0.5rem;
+		}
+
+section.apps .applist .entry .logo {
+				align-self: center;
+				width: 100%;
+				-o-object-fit: contain;
+				   object-fit: contain;
+				flex: 1 1 auto;
+			}
+
+section.apps .applist .entry .logo.redraw {
+				fill: var(--fg);
+				stroke: var(--fg);
+			}
+
+section.apps .applist .entry div {
+				padding: 1rem 0;
+			}
+
+section.apps .applist .entry div h3 {
+					margin-top: 0;
+				}
+
+section.login form {
+		display: inline-grid;
+		grid-template-columns: auto 100%;
+		grid-gap: 0.7rem;
+	}
+
+section.login form button {
+			place-self: center;
+			grid-column: 2;
+		}
+
+section.error {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+section.error span {
+		font-size: 2em;
+	}
+
+section.error pre {
+		border: 1px solid #ff000080;
+		margin-left: 1em;
+		padding: 0 0.7em;
+		border-radius: 0.5em;
+		background-color: #ff000010;
+		font-size: 1.3em;
+		white-space: pre-wrap;
+	}
+
+input, select, textarea {
+	border: 1px solid var(--fg);
+	color: var(--fg);
+	background: var(--bg);
+	width: 100%;
+}
+
+footer {
+	align-self: end;
+
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+}
+
+footer div {
+		margin: 0 2rem;
+		padding: 1rem;
+	}
+
+footer a {
+		font-weight: bold;
+	}
+
+@media screen and (orientation: portrait) {
+	main {
+		grid-template-columns: 1fr 92% 1fr;
+	}
+
+	header {
+		text-align: center;
+	}
+
+	footer {
+		margin-top: 2rem;
+		grid-template-columns: 1fr;
+	}
+
+		footer div {
+			margin: 0.3rem 0;
+		}
+
+	section.apps .applist {
+		grid-template-columns: 1fr;
+	}
+}
+
