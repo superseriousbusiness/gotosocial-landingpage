@@ -252,7 +252,7 @@ footer a {
 	}
 
 @media screen and (orientation: portrait) {
-	main {
+	.page {
 		grid-template-columns: 1fr 92% 1fr;
 	}
 
