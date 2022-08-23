@@ -8,23 +8,33 @@
 	--blue: #63b1de;
 	--sloth_gray2_darker3: hsl(233.33333333333337, 5.5214723926%, 28.9607843137%);
 	--sloth_gray2_darker5: hsl(233.33333333333337, 5.5214723926%, 26.9607843137%);
-	--sloth_gray2_darker10: hsl(233.33333333333337, 5.5214723926%, 16.9607843137%);
-	--sloth_gray2_lighter2: hsl(233.33333333333337, 5.5214723926%, 33.9607843137%);
+	--sloth_gray2_darker7: hsl(233.33333333333337, 5.5214723926%, 24.9607843137%);
+	--sloth_gray2_darker15: hsl(233.33333333333337, 5.5214723926%, 16.9607843137%);
+	--sloth_gray2_lighter3: hsl(233.33333333333337, 5.5214723926%, 34.9607843137%);
+	--sloth_gray2_lighter5: hsl(233.33333333333337, 5.5214723926%, 36.9607843137%);
 	--blue_lighter8: hsl(201.9512195121951, 65.0793650794%, 66.9411764706%);
 	--lightblue: hsl(201.9512195121951, 65.0793650794%, 78.9411764706%);
 	--fg: var(--near_white);
-	--bg: var(--sloth_gray2_darker5);
+	--bg: var(--sloth_gray2_darker7);
 	--bg_trans: rgba(77, 78, 86, 0.62);
-	--bg_accent: var(--sloth_gray2_lighter2);
+	--bg_accent: var(--sloth_gray2_lighter3);
 	--fg_accent: var(--lightblue);
+	--border_accent: var(--sloth_orange2);
 	--footer_bg: var(--bg_accent);
 	--link_fg: var(--fg_accent);
 	--button_border: 0.08rem solid hsl(21.854304635761586, 65.9388646288%, 40.0980392157%);
 	--button_bg: var(--blue_lighter8);
+	--button_fg: var(--sloth_gray2_darker15);
 	--button_hover_bg: var(--lightblue);
+	--status_focus_bg: var(--bg_accent);
+	--status_unfocus_bg: var(--sloth_gray2_darker3);
+	--status_info_fg: #CBCBD7;
+	--bg_no_img_desc: var(--sloth_orange2);
+	--bg_sensitive: var(--sloth_gray2_darker15);
 	--boxshadow: 0 0.4rem 1rem -0.1rem rgba(0,0,0,0.15);
 	--boxshadow_border: 0.08rem solid var(--sloth_gray2_darker5);
-	--profile_avatar_border: 0.2rem solid var(--sloth_orange2)
+	--profile_avatar_border: 0.2rem solid var(--border_accent);
+	--input_bg: var(--sloth_gray2_darker3)
 }
 
 /*
@@ -51,6 +61,8 @@
 */
 
 /* Color definitions */
+
+/* complementary color to $sloth_orange1*/
 
 /* derivative colors */
 

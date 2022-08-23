@@ -1,6 +1,7 @@
 
 :root {
 	--br: 0.4rem;
+	--br_inner: 0.2rem;
 }
 
 /*
@@ -21,12 +22,332 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+
+html {
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	   tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+
+html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+
+body {
+	margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+
+body {
+	font-family:
+		system-ui,
+		-apple-system, /* Firefox supports this but not yet `system-ui` */
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+}
+
+/*
+Grouping content
+================
+*/
+
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+
+hr {
+	height: 0; /* 1 */
+	color: inherit; /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr[title] {
+	-webkit-text-decoration: underline dotted;
+	        text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+	font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+	text-indent: 0; /* 1 */
+	border-color: inherit; /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+
+button,
+select { /* 1 */
+	text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+
+::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+
+:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+
+:-moz-ui-invalid {
+	box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+	padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+	vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+	display: list-item;
+}
+
+@font-face {
+	font-family: "Noto Sans";
+	font-weight: 400;
+	src: url(../NotoSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: "Noto Sans";
+	font-weight: bold;
+	src: url(../NotoSans-Bold.ttf) format('truetype');
+}
+
+/* standard border radius for nice squircles*/
+
+/* border radius for items that are framed/bordered*/
+
+/* inside something with $br, eg avatar, header img*/
+
 html, body {
 	padding: 0;
 	margin: 0;
 	background: var(--bg);
 	color: var(--fg);
-	font-family: sans-serif;
+	font-family: "Noto Sans", sans-serif;
+	scrollbar-color: var(--sloth_orange1) var(--sloth_gray2_darker3);
 }
 
 body {
@@ -35,15 +356,17 @@ body {
 	position: relative;
 }
 
+.hidden {
+	display: none;
+}
+
 .page {
 	position: absolute;
 	display: grid;
 	min-height: 100%;
 	min-width: 100%;
 
-	grid-template-columns: 1fr 50% 1fr;
 	grid-template-columns: auto min(92%, 90ch) auto;
-
 	grid-template-rows: auto 1fr auto;
 }
 
@@ -86,6 +409,7 @@ header a div {
 	}
 
 header a div h1 {
+			word-wrap: anywhere;
 			align-self: center;
 			color: var(--fg);
 		}
@@ -123,7 +447,7 @@ main p:last-child {
 
 .button, button {
 	border-radius: 0.2rem;
-	color: var(--fg);
+	color: var(--button_fg);
 	background: var(--button_bg);
 	box-shadow: var(--boxshadow);
 	border: var(--button_border);
@@ -133,6 +457,8 @@ main p:last-child {
 	padding: 0.5rem;
 	border: none;
 	cursor: pointer;
+	text-align: center;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 .button:hover, button:hover {
@@ -168,8 +494,8 @@ section.apps .applist {
 
 section.apps .applist .entry {
 			display: grid;
-			grid-template-columns: 30% 1fr;
-			gap: 0.5rem;
+			grid-template-columns: 25% 1fr;
+			gap: 1.5rem;
 			padding: 0.5rem;
 			background: var(--bg_accent);
 			border-radius: 0.5rem;
@@ -188,6 +514,10 @@ section.apps .applist .entry .logo.redraw {
 				stroke: var(--fg);
 			}
 
+section.apps .applist .entry a {
+				font-weight: bold;
+			}
+
 section.apps .applist .entry div {
 				padding: 1rem 0;
 			}
@@ -197,14 +527,27 @@ section.apps .applist .entry div h3 {
 				}
 
 section.login form {
-		display: inline-grid;
-		grid-template-columns: auto 100%;
-		grid-gap: 0.7rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+
+		padding-bottom: 1rem;
+		padding-top: 1rem;
 	}
 
-section.login form button {
-			place-self: center;
-			grid-column: 2;
+section.login form label, section.login form input {
+			padding-left: 0.2rem;
+		}
+
+section.login form .labelinput {
+			display: flex;
+			flex-direction: column;
+			gap: 0.4rem;
+		}
+
+section.login form .btn {
+			margin-top: 1rem;
 		}
 
 section.error {
@@ -228,45 +571,58 @@ section.error pre {
 	}
 
 input, select, textarea {
-	border: 1px solid var(--fg);
+	box-sizing: border-box;
+	border: 0.15rem solid var(--border_accent);
+	border-radius: 0.1rem;
 	color: var(--fg);
-	background: var(--bg);
+	/* background: $input_bg; */
+	background: var(--bg_accent);
 	width: 100%;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 1rem;
+	padding: 0.3rem;
+}
+
+input:focus, select:focus, textarea:focus {
+		border-color: var(--fg_accent);
+	}
+
+input, textarea {
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
 }
 
 footer {
 	align-self: end;
+	padding: 2rem 0 1rem 0;
 
-	padding: 2rem;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 
 footer div {
-		margin: 0 2rem;
+		text-align: center;
 		padding: 1rem;
+		flex-grow: 1;
 	}
 
 footer a {
 		font-weight: bold;
 	}
 
-@media screen and (orientation: portrait) {
-	.page {
-		grid-template-columns: 1fr 92% 1fr;
-	}
-
+@media screen and (max-width: 600px) {
 	header {
 		text-align: center;
 	}
 
 	footer {
-		margin-top: 2rem;
 		grid-template-columns: 1fr;
 	}
 
 		footer div {
-			margin: 0.3rem 0;
+			text-align: initial;
+			width: 100%;
 		}
 
 	section.apps .applist {
