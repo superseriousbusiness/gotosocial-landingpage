@@ -1,7 +1,7 @@
 
 :root {
 	--br: 0.4rem;
-	--br_inner: 0.2rem;
+	--br-inner: 0.2rem;
 }
 
 /*
@@ -44,7 +44,6 @@ Use a more readable tab size (opinionated).
 */
 
 html {
-	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	   tab-size: 4;
 }
@@ -335,11 +334,10 @@ summary {
 	src: url(../NotoSans-Bold.ttf) format('truetype');
 }
 
-/* standard border radius for nice squircles*/
+/* standard border radius for nice squircles */
 
-/* border radius for items that are framed/bordered*/
-
-/* inside something with $br, eg avatar, header img*/
+/* border radius for items that are framed/bordered
+   inside something with $br, eg avatar, header img */
 
 html, body {
 	padding: 0;
@@ -347,7 +345,7 @@ html, body {
 	background: var(--bg);
 	color: var(--fg);
 	font-family: "Noto Sans", sans-serif;
-	scrollbar-color: var(--sloth_orange1) var(--sloth_gray2_darker3);
+	scrollbar-color: var(--orange1) var(--gray3);
 }
 
 body {
@@ -365,7 +363,9 @@ body {
 	display: grid;
 	min-height: 100%;
 	min-width: 100%;
+	width: 100%;
 
+	grid-template-columns: auto minmax(auto, 90ch) auto;
 	grid-template-columns: auto min(92%, 90ch) auto;
 	grid-template-rows: auto 1fr auto;
 }
@@ -376,7 +376,7 @@ h1 {
 }
 
 a {
-	color: var(--link_fg);
+	color: var(--link-fg);
 }
 
 header, footer {
@@ -388,9 +388,13 @@ header, footer {
 	align-self: start;
 }
 
+header {
+	display: flex;
+	justify-content: center;
+}
+
 header a {
 	margin: 2rem;
-	/* background: $header_bg; */
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -414,7 +418,7 @@ header a div h1 {
 			color: var(--fg);
 		}
 
-.excerpt_top {
+.excerpt-top {
 	margin-top: -1rem;
 	margin-bottom: 2rem;
 	font-style: italic;
@@ -423,15 +427,15 @@ header a div h1 {
 	font-size: 1.2rem;
 }
 
-.excerpt_top .count {
+.excerpt-top .count {
 		font-weight: bold;
-		color: var(--fg_accent);
+		color: var(--fg-accent);
 	}
 
 main section {
-		background: var(--bg_accent);
+		background: var(--bg-accent);
 		box-shadow: var(--boxshadow);
-		border: var(--boxshadow_border);
+		border: var(--boxshadow-border);
 		border-radius: var(--br);
 		padding: 2rem;
 		margin-bottom: 2rem;
@@ -447,10 +451,10 @@ main p:last-child {
 
 .button, button {
 	border-radius: 0.2rem;
-	color: var(--button_fg);
-	background: var(--button_bg);
+	color: var(--button-fg);
+	background: var(--button-bg);
 	box-shadow: var(--boxshadow);
-	border: var(--button_border);
+	border: var(--button-border);
 	text-decoration: none;
 	font-size: 1.2rem;
 	font-weight: bold;
@@ -461,8 +465,27 @@ main p:last-child {
 	font-family: 'Noto Sans', sans-serif;
 }
 
+.button.danger, button.danger {
+		color: var(--button-danger-fg);
+		background: var(--button-danger-bg);
+	}
+
+.button.danger:hover, button.danger:hover {
+			background: var(--button-danger-hover-bg);
+		}
+
+.button:disabled, button:disabled {
+		color: var(--white2);
+		background: var(--gray2);
+		cursor: auto;
+	}
+
+.button:disabled:hover, button:disabled:hover {
+			background: var(--gray3);
+		}
+
 .button:hover, button:hover {
-		background: var(--button_hover_bg);
+		background: var(--button-hover-bg);
 	}
 
 .nounderline {
@@ -497,7 +520,7 @@ section.apps .applist .entry {
 			grid-template-columns: 25% 1fr;
 			gap: 1.5rem;
 			padding: 0.5rem;
-			background: var(--bg_accent);
+			background: var(--bg-accent);
 			border-radius: 0.5rem;
 		}
 
@@ -519,7 +542,7 @@ section.apps .applist .entry a {
 			}
 
 section.apps .applist .entry div {
-				padding: 1rem 0;
+				padding: 0;
 			}
 
 section.apps .applist .entry div h3 {
@@ -551,9 +574,11 @@ section.login form .btn {
 		}
 
 section.error {
+	word-break: break-word;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	margin-bottom: 0.5rem;
 }
 
 section.error span {
@@ -570,26 +595,47 @@ section.error pre {
 		white-space: pre-wrap;
 	}
 
-input, select, textarea {
+.error-text {
+	color: var(--error1);
+	background: var(--error2);
+	border-radius: 0.1rem;
+	font-weight: bold;
+}
+
+input, select, textarea, .input {
 	box-sizing: border-box;
-	border: 0.15rem solid var(--border_accent);
+	border: 0.15rem solid var(--input-border);
 	border-radius: 0.1rem;
 	color: var(--fg);
-	/* background: $input_bg; */
-	background: var(--bg_accent);
+	background: var(--input-bg);
 	width: 100%;
 	font-family: 'Noto Sans', sans-serif;
 	font-size: 1rem;
 	padding: 0.3rem;
 }
 
-input:focus, select:focus, textarea:focus {
-		border-color: var(--fg_accent);
+input:focus, select:focus, textarea:focus, .input:focus {
+		border-color: var(--input-focus-border);
 	}
 
-input, textarea {
-	padding-top: 0.1rem;
-	padding-bottom: 0.1rem;
+input:disabled, select:disabled, textarea:disabled, .input:disabled {
+		background: var(--input-disabled-bg);
+	}
+
+::-webkit-input-placeholder {
+	opacity: 1;
+	color: var(--fg-reduced)
+}
+
+::placeholder {
+	opacity: 1;
+	color: var(--fg-reduced)
+}
+
+hr {
+	color: transparent;
+	width: 100%;
+	border-bottom: 0.02rem solid var(--border-accent);
 }
 
 footer {
@@ -630,3 +676,41 @@ footer a {
 	}
 }
 
+.emoji {
+	width: 1.45em;
+	height: 1.45em;
+	margin: -0.2em 0.02em 0;
+	-o-object-fit: contain;
+	   object-fit: contain;
+	vertical-align: middle;
+}
+
+.monospace {
+	font-family: monospace;
+}
+
+.callout {
+	margin: 1.5rem 0;
+	border: .05rem solid var(--border-accent);
+	border-radius: .2rem;
+	padding: 0 .6rem .6rem;
+}
+
+.callout .callout-title {
+		margin: 0 -.6rem;
+		padding: .6rem;
+		font-weight: bold;
+		background-color: var(--border-accent);
+		color: var(--gray1);
+	}
+
+label {
+	cursor: pointer;
+}
+
+@media (prefers-reduced-motion) {
+	.fa-spin {
+		-webkit-animation: none;
+		        animation: none;
+	}
+}

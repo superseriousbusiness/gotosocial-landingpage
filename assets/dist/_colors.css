@@ -1,40 +1,62 @@
 
 :root {
-	--near_white: #fafaff;
-	--sloth_gray1: #b0b0b5;
-	--sloth_gray2: #4d4e56;
-	--sloth_orange1: #e78e5a;
-	--sloth_orange2: #D87841;
-	--blue: #63b1de;
-	--sloth_gray2_darker3: hsl(233.33333333333337, 5.5214723926%, 28.9607843137%);
-	--sloth_gray2_darker5: hsl(233.33333333333337, 5.5214723926%, 26.9607843137%);
-	--sloth_gray2_darker7: hsl(233.33333333333337, 5.5214723926%, 24.9607843137%);
-	--sloth_gray2_darker15: hsl(233.33333333333337, 5.5214723926%, 16.9607843137%);
-	--sloth_gray2_lighter3: hsl(233.33333333333337, 5.5214723926%, 34.9607843137%);
-	--sloth_gray2_lighter5: hsl(233.33333333333337, 5.5214723926%, 36.9607843137%);
-	--blue_lighter8: hsl(201.9512195121951, 65.0793650794%, 66.9411764706%);
-	--lightblue: hsl(201.9512195121951, 65.0793650794%, 78.9411764706%);
-	--fg: var(--near_white);
-	--bg: var(--sloth_gray2_darker7);
-	--bg_trans: rgba(77, 78, 86, 0.62);
-	--bg_accent: var(--sloth_gray2_lighter3);
-	--fg_accent: var(--lightblue);
-	--border_accent: var(--sloth_orange2);
-	--footer_bg: var(--bg_accent);
-	--link_fg: var(--fg_accent);
-	--button_border: 0.08rem solid hsl(21.854304635761586, 65.9388646288%, 40.0980392157%);
-	--button_bg: var(--blue_lighter8);
-	--button_fg: var(--sloth_gray2_darker15);
-	--button_hover_bg: var(--lightblue);
-	--status_focus_bg: var(--bg_accent);
-	--status_unfocus_bg: var(--sloth_gray2_darker3);
-	--status_info_fg: #CBCBD7;
-	--bg_no_img_desc: var(--sloth_orange2);
-	--bg_sensitive: var(--sloth_gray2_darker15);
+	--white1: #fafaff;
+	--white2: #b3b5c6;
+	--gray1: #2a2b2f;
+	--gray2: #35363b;
+	--gray3: #3a3b41;
+	--gray4: #45464e;
+	--gray5: #4d4e56;
+	--gray6: #575861;
+	--gray7: #5d5e67;
+	--gray8: #696a75;
+	--orange1: #fd6a00;
+	--orange2: #ff853e;
+	--blue1: #3a9fde;
+	--blue2: #66befe;
+	--blue3: #89caff;
+	--error1: #860000;
+	--error2: #ff9796;
+	--error3: #dd2c2c;
+	--error-link: #185F8C;
+	--fg: var(--white1);
+	--bg: var(--gray1);
+	--bg-trans: rgba(77, 78, 86, 0.62);
+	--bg-accent: var(--gray5);
+	--fg-accent: var(--blue3);
+	--fg-reduced: var(--white2);
+	--border-accent: var(--orange2);
+	--link-fg: var(--fg-accent);
+	--role-moderator: var(--orange1);
+	--role-admin: var(--blue2);
+	--button-bg: var(--blue2);
+	--button-fg: var(--gray1);
+	--button-hover-bg: var(--blue3);
+	--button-danger-bg: var(--error3);
+	--button-danger-fg: var(--white1);
+	--button-danger-hover-bg: var(--error2);
+	--toot-focus-bg: var(--gray5);
+	--toot-unfocus-bg: var(--gray2);
+	--toot-info-bg: var(--gray4);
+	--no-img-desc-bg: var(--orange1);
+	--no-img-desc-fg: var(--gray1);
+	--bg-sensitive: var(--gray1);
 	--boxshadow: 0 0.4rem 1rem -0.1rem rgba(0,0,0,0.15);
-	--boxshadow_border: 0.08rem solid var(--sloth_gray2_darker5);
-	--profile_avatar_border: 0.2rem solid var(--border_accent);
-	--input_bg: var(--sloth_gray2_darker3)
+	--boxshadow-border: 0.08rem solid var(--gray1);
+	--avatar-border: var(--orange2);
+	--input-bg: var(--gray4);
+	--input-disabled-bg: var(--gray2);
+	--input-border: var(--blue1);
+	--input-focus-border: var(--blue3);
+	--settings-nav-bg: var(--bg-accent);
+	--settings-nav-header-fg: var(--gray1);
+	--settings-nav-header-bg: var(--orange1);
+	--settings-nav-bg-hover: var(--gray3);
+	--settings-nav-bg-active: var(--gray2);
+	--error-fg: var(--error1);
+	--error-bg: var(--error2);
+	--settings-entry-bg: var(--gray3);
+	--settings-entry-hover-bg: var(--gray4)
 }
 
 /*
@@ -62,8 +84,34 @@
 
 /* Color definitions */
 
-/* complementary color to $sloth_orange1*/
+/* Foreground */
 
-/* derivative colors */
+/* default text color, contrast >= 5.0 with all $grays */
+
+/* less important text, can be used with $gray1 (6.8), $gray2 (5.5), $gray3 (4.9), $gray4 (4.5) */
+
+/* Background shades, contrast >= 5.0 with $white1 (#fafaff) */
+
+/* Used for non-text accent colors, can be used as background: $gray1 for text color (contrast 4.6)*/
+
+/* hover/selected accent to $orange1, can be used with $gray1 (5.7), $gray2 (4.6) */
+
+/* darker blue for smaller elements (borders), can only be used with $gray1 (4.7) */
+
+/* all-round accent color, can be used with $gray1 (6.8), $gray2 (5.5), $gray3 (4.9), $gray4 (4.5) */
+
+/* hover/selected accent to $blue2, can be used with $gray1 (7.9), $gray2 (6.3), $gray3 (5.6), $gray4 (5.2), $gray5 (4.7) */
+
+/* Error border/foreground text, can be used with $error2 (5.0), $white1 (10), $white2 (5.1) */
+
+/* Error background text, can be used with $error1 (5.0), $gray1 (6.6), $gray2 (5.3), $gray3 (4.8) */
+
+/* Error button background text, can be used with $white1 (4.51) */
+
+/* Error link text, can be used with $error2 (5.54) */
 
 /* Color variables as used in a specific location */
+
+/* $settings-nav-fg-hover: $gray1; */
+
+/* $settings-nav-fg-active: $orange2; */
