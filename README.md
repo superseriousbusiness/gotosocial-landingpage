@@ -20,5 +20,5 @@ Please do not add any new section and try to keep the size of your text as close
 
 ### Option 2
 
-Translate `index.html` to your language an email it to `xmgz at pm . me` specifying **your language code**
+Translate `index.html` to your language an email it to `xmgz [at] pm . me` specifying **your language code**
 
