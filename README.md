@@ -4,7 +4,7 @@ HTML and assets for the landing page at https://gotosocial.org
 
 ## Contribute
 
-## translations
+## Translate
 
 Contribute to **gotosocial.org** translating this website to your language and helping people to learn about the project.
 
