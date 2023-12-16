@@ -1,1 +1,30 @@
 /* Additional landing page CSS goes here*/
+
+/* language selection, top bar */
+.langbar {
+position: absolute;
+top: 0px;
+left: 0px;
+width: autofill; /* make it auto? autofill/100% */ 
+height: autofill;
+padding: 2px;
+background: #666;
+color: #fff; /* more visible */
+opacity:.75; /* making it less obvious or intrusive */
+-moz-opacity: 0.75;
+filter: alpha(opacity=75);
+text-align: right;
+z-index:1001;  /* just in case */
+font-size:0.7em;
+font-weight:bolder;
+} 
+
+.langbar a {
+text-decoration: none;
+}
+
+/* for current (active) */
+.langbar a:active {
+font-weight: bolder;
+color: aaa; /* accent */
+}
