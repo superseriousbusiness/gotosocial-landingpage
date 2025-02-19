@@ -1,6 +1,9 @@
 {
   "@context": {
     "gts": "https://gotosocial.org/ns#",
+    "LikeApproval": "gts:LikeApproval",
+    "ReplyApproval": "gts:ReplyApproval",
+    "AnnounceApproval": "gts:AnnounceApproval",
     "interactionPolicy": {
       "@id": "gts:interactionPolicy",
       "@type": "@id"
